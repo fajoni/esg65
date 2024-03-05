@@ -1,4 +1,15 @@
- { "api/app.py": {
-      "runtime": "python3.11"
-     }
+{
+ "version":2,
+ "builds":[
+   {
+     "src": "api/*.py"
+     "use": "@now/python"
    }
+ ],
+ "routes": [
+   {
+     "src": "/(.*)",
+     "dest": "api/app.py"
+   }
+ ]
+}
