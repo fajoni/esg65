@@ -26,17 +26,8 @@ def index():
     # 直接使用網站的完整 URL 進行重定向
     return redirect(assigned_website)
 
+from api import app  # 假設您的 Flask app 實例名為 app
+
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=False, host='0.0.0.0')
+    app.run(debug=True, use_reloader=False)
     
-
-
-import os
-
-# 獲取當前檔案的絕對路徑
-current_file_path = os.path.abspath(__file__)
-
-# 獲取專案目錄的絕對路徑
-project_dir = os.path.dirname(current_file_path)
-
-print("專案目錄:", project_dir)
