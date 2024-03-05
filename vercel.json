@@ -1,6 +1,4 @@
- { "function": {
-    "api/app.py": {
+ { "api/app.py": {
       "runtime": "python3.11"
      }
    }
- }
